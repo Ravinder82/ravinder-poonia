@@ -9,7 +9,7 @@ import Contact from '../components/sections/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-navy text-white">
+    <div className="min-h-screen text-white">
       <Navbar />
       <main>
         <Hero />
