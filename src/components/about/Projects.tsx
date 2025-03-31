@@ -1,3 +1,4 @@
+
 import { Code, Component, BarChart3 } from 'lucide-react';
 
 const ActiveProjects = () => {

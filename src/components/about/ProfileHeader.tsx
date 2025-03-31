@@ -1,5 +1,6 @@
 
 import { Star } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface SkillProps {
   label: string;
@@ -33,9 +34,9 @@ const ProfileHeader = () => {
           <div className="md:w-1/3 relative animate-fade-in">
             <div className="rounded-2xl overflow-hidden border-4 border-teal/20 shadow-xl shadow-teal/5">
               <img
-                src="https://images.unsplash.com/photo-1603575448878-868a20723f5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/lovable-uploads/6a6c0f0a-0e8e-411f-84d4-5a8dd5a88c54.png"
                 alt="Ravinder Poonia"
-                className="w-full object-cover aspect-square"
+                className="w-full object-cover aspect-square bg-navy"
               />
             </div>
             <div className="absolute -bottom-5 -right-5 bg-navy p-3 rounded-lg border border-teal/30 shadow-lg">
