@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className="min-h-screen text-white">
       <Navbar />
-      <main>
+      <main className="bg-[#0F0817] relative">
         <AboutHero />
         <Journey />
         <ActiveProjects />

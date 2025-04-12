@@ -1,14 +1,13 @@
-
 import { CircleCheck, Briefcase, GraduationCap, Award } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Journey = () => {
   return (
-    <section className="py-24 bg-navy/95">
+    <section id="journey" className="py-24 bg-[#0F0817]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="ai-tag mb-4">My Background</span>
-          <h2 className="section-title">Professional Journey</h2>
+          <h2 className="section-title text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500">Professional Journey</h2>
           <p className="section-subtitle mx-auto">
             A path from policy research to AI-driven development
           </p>
@@ -17,24 +16,24 @@ const Journey = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-10">
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-              <GraduationCap className="mr-3 text-teal" />
+              <GraduationCap className="mr-3 text-pink-500" />
               Education
             </h3>
             
             <div className="relative pl-8 border-l border-white/20">
-              <div className="absolute w-4 h-4 bg-teal rounded-full -left-2 top-1.5"></div>
-              <div className="bg-secondary/30 rounded-xl p-6 border border-white/10">
+              <div className="absolute w-4 h-4 bg-pink-500 rounded-full -left-2 top-1.5"></div>
+              <div className="bg-[#1A0F24]/40 rounded-xl p-6 border border-pink-500/20 hover:border-pink-500/30 transition-colors">
                 <h4 className="text-xl font-bold text-white mb-2">Bachelor of Technology in Computer Science</h4>
                 <p className="text-white/70 mb-2">Kurukshetra University, Haryana (56%)</p>
-                <p className="text-teal text-sm">2010-2015</p>
+                <p className="text-pink-400 text-sm">2010-2015</p>
                 <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="px-3 py-1 bg-white/10 rounded-full text-white/80 text-xs">
+                  <span className="px-3 py-1 bg-[#1A0F24]/60 rounded-full text-white/80 text-xs">
                     Vb.Net
                   </span>
-                  <span className="px-3 py-1 bg-white/10 rounded-full text-white/80 text-xs">
+                  <span className="px-3 py-1 bg-[#1A0F24]/60 rounded-full text-white/80 text-xs">
                     MySQL
                   </span>
-                  <span className="px-3 py-1 bg-white/10 rounded-full text-white/80 text-xs">
+                  <span className="px-3 py-1 bg-[#1A0F24]/60 rounded-full text-white/80 text-xs">
                     WordPress
                   </span>
                 </div>
@@ -42,22 +41,22 @@ const Journey = () => {
             </div>
             
             <div className="relative pl-8 border-l border-white/20">
-              <div className="absolute w-4 h-4 bg-teal rounded-full -left-2 top-1.5"></div>
-              <div className="bg-secondary/30 rounded-xl p-6 border border-white/10">
+              <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-2 top-1.5"></div>
+              <div className="bg-[#1A0F24]/40 rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/30 transition-colors">
                 <h4 className="text-xl font-bold text-white mb-2">12th in Science (64%)</h4>
                 <p className="text-white/70 mb-2">Holy Heart Sr. Sec. School, Jind, Haryana</p>
-                <p className="text-teal text-sm">C.B.S.E-2008</p>
+                <p className="text-purple-400 text-sm">C.B.S.E-2008</p>
               </div>
             </div>
             
             <h3 className="text-2xl font-bold text-white mb-6 mt-12 flex items-center">
-              <Award className="mr-3 text-teal" />
+              <Award className="mr-3 text-blue-500" />
               Certifications
             </h3>
             
             <div className="relative pl-8 border-l border-white/20">
-              <div className="absolute w-4 h-4 bg-teal rounded-full -left-2 top-1.5"></div>
-              <div className="bg-secondary/30 rounded-xl p-6 border border-white/10">
+              <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-2 top-1.5"></div>
+              <div className="bg-[#1A0F24]/40 rounded-xl p-6 border border-blue-500/20 hover:border-blue-500/30 transition-colors">
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CircleCheck size={16} className="text-teal mr-2 mt-1 flex-shrink-0" />
@@ -78,15 +77,15 @@ const Journey = () => {
           
           <div className="space-y-10">
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-              <Briefcase className="mr-3 text-teal" />
+              <Briefcase className="mr-3 text-pink-500" />
               Professional Experience
             </h3>
             
             <Accordion type="single" collapsible className="border-white/10">
-              <AccordionItem value="fellowship" className="border-white/10 mb-6 bg-secondary/30 rounded-xl">
+              <AccordionItem value="fellowship" className="border-pink-500/20 mb-6 bg-[#1A0F24]/40 rounded-xl">
                 <AccordionTrigger className="px-6 text-white hover:no-underline">
                   <div className="text-left">
-                    <span className="text-teal text-sm font-medium">Sep 2019 - Sep 2021</span>
+                    <span className="text-pink-400 text-sm font-medium">Sep 2019 - Sep 2021</span>
                     <h4 className="text-xl font-bold text-white mt-1">Fellowship in Public Policy & Research</h4>
                     <p className="text-white/70">Delhi Assembly Research Centre</p>
                   </div>
@@ -161,10 +160,10 @@ const Journey = () => {
                 </AccordionContent>
               </AccordionItem>
               
-              <AccordionItem value="socialmedia" className="border-white/10 mb-6 bg-secondary/30 rounded-xl">
+              <AccordionItem value="socialmedia" className="border-blue-500/20 mb-6 bg-[#1A0F24]/40 rounded-xl">
                 <AccordionTrigger className="px-6 text-white hover:no-underline">
                   <div className="text-left">
-                    <span className="text-teal text-sm font-medium">Sep 2018 - Sep 2019</span>
+                    <span className="text-blue-400 text-sm font-medium">Sep 2018 - Sep 2019</span>
                     <h4 className="text-xl font-bold text-white mt-1">Social Media Manager & Data Analyst</h4>
                     <p className="text-white/70">Value One Digital Media Pvt. Ltd, Delhi</p>
                   </div>
@@ -187,10 +186,10 @@ const Journey = () => {
                 </AccordionContent>
               </AccordionItem>
               
-              <AccordionItem value="freelance" className="border-white/10 mb-6 bg-secondary/30 rounded-xl">
+              <AccordionItem value="freelance" className="border-purple-500/20 mb-6 bg-[#1A0F24]/40 rounded-xl">
                 <AccordionTrigger className="px-6 text-white hover:no-underline">
                   <div className="text-left">
-                    <span className="text-teal text-sm font-medium">2022 - 2023</span>
+                    <span className="text-purple-400 text-sm font-medium">2022 - 2023</span>
                     <h4 className="text-xl font-bold text-white mt-1">Freelance Projects</h4>
                   </div>
                 </AccordionTrigger>
@@ -213,7 +212,7 @@ const Journey = () => {
             </Accordion>
             
             <div className="mt-8">
-              <div className="bg-secondary/30 rounded-xl p-6 border border-white/10">
+              <div className="bg-[#1A0F24]/40 rounded-xl p-6 border border-white/10 hover:border-pink-500/20 transition-colors">
                 <h4 className="text-xl font-bold text-white mb-4">Skills Developed</h4>
                 <div className="grid grid-cols-2 gap-3">
                   {[

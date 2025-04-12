@@ -53,7 +53,8 @@ const AboutHero = () => {
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/80 to-transparent z-20"></div>
             </div>
             
-            <div className="absolute -bottom-8 -left-8 glass-card p-4 rounded-xl border border-pink-500/30 shadow-xl animate-float" style={{ animationDelay: '0.2s' }}>
+            {/* Adjusted position to bottom-4 right-4 instead of bottom-8 left-8 to prevent overlap */}
+            <div className="absolute bottom-4 right-4 glass-card p-4 rounded-xl border border-pink-500/30 shadow-xl animate-float" style={{ animationDelay: '0.2s' }}>
               <p className="text-pink-400 text-xs mb-2 font-medium">Ready to collaborate?</p>
               <a href="#connect" className="text-white flex items-center text-sm group">
                 Get in Touch 
