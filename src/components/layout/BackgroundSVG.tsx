@@ -7,25 +7,51 @@ const BackgroundSVG = () => {
       <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
         <defs>
           <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="10" height="10" fill="#1E293B" opacity="0.1" />
-            <path d="M0 0 L10 10 M10 0 L0 10" stroke="#1E293B" stroke-width="0.2" opacity="0.2" />
+            <rect x="0" y="0" width="10" height="10" fill="#1E1022" opacity="0.1" />
+            <path d="M0 0 L10 10 M10 0 L0 10" stroke="#33163A" stroke-width="0.2" opacity="0.2" />
           </pattern>
-          <filter id="blur" x="-5%" y="-5%" width="110%" height="110%" filterUnits="objectBoundingBox">
-            <feGaussianBlur stdDeviation="0.5" />
+          <filter id="glow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="objectBoundingBox">
+            <feGaussianBlur stdDeviation="1" />
           </filter>
+          <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#FF00CC" />
+            <stop offset="100%" stopColor="#FF33FF" />
+          </linearGradient>
+          <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#0033FF" />
+            <stop offset="100%" stopColor="#0099FF" />
+          </linearGradient>
+          <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#9900FF" />
+            <stop offset="100%" stopColor="#CC33FF" />
+          </linearGradient>
         </defs>
-        <rect width="100%" height="100%" fill="#0F172A" />
-        <g opacity="0.6">
-          <rect x="5" y="15" width="20" height="15" fill="#38BDF8" filter="url(#blur)" />
-          <circle cx="70" cy="25" r="12" fill="#60A5FA" filter="url(#blur)" />
-          <rect x="40" y="50" width="25" height="18" fill="#38BDF8" filter="url(#blur)" />
-          <path d="M15 65 L35 80 L10 90 Z" fill="#60A5FA" filter="url(#blur)" />
-          <circle cx="85" cy="70" r="15" fill="#38BDF8" filter="url(#blur)" />
-          <rect x="60" y="40" width="15" height="22" fill="#60A5FA" filter="url(#blur)" />
-          <path d="M5 25 L18 40 L0 45 Z" fill="#38BDF8" filter="url(#blur)" />
-          <rect x="80" y="5" width="18" height="10" fill="#60A5FA" filter="url(#blur)" />
-        </g>
+        
+        {/* Deep dark background */}
+        <rect width="100%" height="100%" fill="#0F0817" />
+        
+        {/* Subtle gradient overlay */}
         <rect width="100%" height="100%" fill="url(#grid)" />
+        
+        {/* Subtle glow effects that mimic the neon lights */}
+        <g opacity="0.3">
+          {/* Pink neon */}
+          <rect x="5" y="95" width="20" height="1" fill="url(#neonPink)" filter="url(#glow)" />
+          <rect x="10" y="90" width="15" height="1" fill="url(#neonPink)" filter="url(#glow)" />
+          
+          {/* Purple neon */}
+          <rect x="40" y="95" width="20" height="1" fill="url(#neonPurple)" filter="url(#glow)" />
+          
+          {/* Blue neon */}
+          <rect x="75" y="95" width="20" height="1" fill="url(#neonBlue)" filter="url(#glow)" />
+        </g>
+        
+        {/* Subtle radial gradient in the center */}
+        <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+          <stop offset="0%" stopColor="#33163A" stopOpacity="0.1" />
+          <stop offset="100%" stopColor="#0F0817" stopOpacity="0" />
+        </radialGradient>
+        <rect width="100%" height="100%" fill="url(#centerGlow)" />
       </svg>
     </div>
   );
