@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
 import BackgroundSVG from "./components/layout/BackgroundSVG";
 
@@ -20,7 +19,6 @@ const App = () => (
         <BackgroundSVG />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

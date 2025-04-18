@@ -1,7 +1,7 @@
 
-import { ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Avatar } from '@/components/ui/avatar';
+import NewsletterForm from '../newsletter/NewsletterForm';
 
 const AboutHero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -13,7 +13,7 @@ const AboutHero = () => {
   }, []);
 
   return (
-    <section className="min-h-[80vh] pt-28 pb-16 flex items-center relative overflow-hidden">
+    <section className="min-h-[90vh] pt-28 pb-16 flex items-center relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 z-10 animate-fade-in">
@@ -24,15 +24,6 @@ const AboutHero = () => {
             <p className="text-xl text-white/80 mb-8 max-w-xl">
               Transforming complex challenges into innovative digital solutions through AI-driven development and automation.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="#newsletter" className="btn-primary bg-gradient-to-r from-pink-500 to-blue-500 border-none">
-                Subscribe to Newsletter
-              </a>
-              <a href="#connect" className="btn-outline border-pink-500/50 hover:bg-pink-500/10">
-                Connect With Me
-              </a>
-            </div>
             
             <div className="flex gap-4 text-sm text-white/60">
               <div>
@@ -50,15 +41,16 @@ const AboutHero = () => {
                 <p>AI & Development</p>
               </div>
             </div>
+
+            <NewsletterForm />
           </div>
           
           <div className="md:w-1/2 relative z-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl max-h-[600px]">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl max-h-[500px]">
               <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 via-purple-600/20 to-blue-500/20 mix-blend-overlay z-10"></div>
               
-              {/* Blurred placeholder */}
               {!imageLoaded && (
-                <div className="w-full aspect-[4/5] bg-gray-800 animate-pulse flex items-center justify-center">
+                <div className="w-full aspect-[4/5] max-h-[500px] bg-gray-800 animate-pulse flex items-center justify-center">
                   <Avatar className="w-16 h-16 opacity-50">
                     <span className="text-lg font-bold text-pink-400">RP</span>
                   </Avatar>
@@ -68,19 +60,11 @@ const AboutHero = () => {
               <img 
                 src="/lovable-uploads/ec5a11cb-abdf-4fb8-b7b7-390ac7842fdc.png" 
                 alt="Ravinder Poonia" 
-                className={`w-full h-auto max-h-[600px] object-cover object-top z-0 transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                className={`w-full h-auto max-h-[500px] object-cover object-top z-0 transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                 loading="lazy"
                 onLoad={() => setImageLoaded(true)}
               />
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/80 to-transparent z-20"></div>
-            </div>
-            
-            <div className="absolute bottom-4 right-4 glass-card p-4 rounded-xl border border-pink-500/30 shadow-xl animate-float" style={{ animationDelay: '0.2s' }}>
-              <p className="text-pink-400 text-xs mb-2 font-medium">Ready to collaborate?</p>
-              <a href="#connect" className="text-white flex items-center text-sm group">
-                Get in Touch 
-                <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
-              </a>
             </div>
           </div>
         </div>

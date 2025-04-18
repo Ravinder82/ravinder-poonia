@@ -2,7 +2,7 @@
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import AboutHero from '../components/about/AboutHero';
-import Connect from '../components/about/Connect';
+import Services from '../components/sections/Services';
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       <Navbar />
       <main className="bg-[#0F0817] relative">
         <AboutHero />
-        <Connect />
+        <Services />
       </main>
       <Footer />
     </div>
