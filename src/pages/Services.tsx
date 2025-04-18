@@ -1,7 +1,7 @@
 
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
-import { Code, Component, Bot, Palette, ChevronRight } from 'lucide-react';
+import { Code, Component, Bot, Palette, GraduationCap, ChevronRight } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -13,21 +13,27 @@ const Services = () => {
     },
     {
       icon: <Bot className="text-purple-500" size={24} />,
-      title: "Mobile Development",
-      description: "Native iOS development with SwiftUI and cross-platform solutions for mobile applications.",
-      features: ["iOS app development", "Cross-platform solutions", "Mobile-first design"]
-    },
-    {
-      icon: <Component className="text-blue-500" size={24} />,
       title: "AI Integration",
       description: "Enhance your products with intelligent features powered by the latest AI technologies.",
       features: ["Chatbots & virtual assistants", "Predictive analytics", "Natural language processing"]
+    },
+    {
+      icon: <Component className="text-blue-500" size={24} />,
+      title: "Mobile Development",
+      description: "Native iOS development with SwiftUI and cross-platform solutions for mobile applications.",
+      features: ["iOS app development", "Cross-platform solutions", "Mobile-first design"]
     },
     {
       icon: <Palette className="text-teal" size={24} />,
       title: "UI/UX Design",
       description: "Create cohesive and intuitive user experiences with AI-powered design systems.",
       features: ["Interactive prototypes", "Component libraries", "User behavior analytics"]
+    },
+    {
+      icon: <GraduationCap className="text-pink-400" size={24} />,
+      title: "Online Tutoring",
+      description: "Personalized guidance in software development, AI integration, and modern tech stack.",
+      features: ["One-on-one mentoring", "Project-based learning", "Career guidance"]
     }
   ];
 
