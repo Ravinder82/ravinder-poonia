@@ -34,8 +34,6 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           <Link to="/" className="text-white/80 hover:text-pink-400 transition-colors">Home</Link>
           <Link to="/#services" className="text-white/80 hover:text-pink-400 transition-colors">Services</Link>
-          <Link to="/#projects" className="text-white/80 hover:text-pink-400 transition-colors">Projects</Link>
-          <Link to="/about" className="text-white/80 hover:text-pink-400 transition-colors">Portfolio</Link>
           <Link to="/#contact" className="btn-primary bg-gradient-to-r from-pink-500 to-blue-500 border-none">Contact</Link>
         </div>
 
@@ -53,8 +51,6 @@ const Navbar = () => {
         <div className="container mx-auto px-6 flex flex-col gap-4">
           <Link to="/" className="text-white/80 hover:text-pink-400 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Home</Link>
           <Link to="/#services" className="text-white/80 hover:text-pink-400 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Services</Link>
-          <Link to="/#projects" className="text-white/80 hover:text-pink-400 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Projects</Link>
-          <Link to="/about" className="text-white/80 hover:text-pink-400 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
           <Link to="/#contact" className="btn-primary bg-gradient-to-r from-pink-500 to-blue-500 border-none w-full text-center" onClick={() => setIsMenuOpen(false)}>Contact</Link>
         </div>
       </div>
