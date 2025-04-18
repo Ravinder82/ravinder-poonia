@@ -27,8 +27,8 @@ const AboutHero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="#journey" className="btn-primary bg-gradient-to-r from-pink-500 to-blue-500 border-none">
-                My Journey
+              <a href="#newsletter" className="btn-primary bg-gradient-to-r from-pink-500 to-blue-500 border-none">
+                Subscribe to Newsletter
               </a>
               <a href="#connect" className="btn-outline border-pink-500/50 hover:bg-pink-500/10">
                 Connect With Me

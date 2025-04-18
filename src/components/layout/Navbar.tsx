@@ -33,11 +33,12 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           <Link to="/" className="text-white/80 hover:text-pink-400 transition-colors">Home</Link>
-          <Link to="/#services" className="text-white/80 hover:text-pink-400 transition-colors">Services</Link>
+          <Link to="/services" className="text-white/80 hover:text-pink-400 transition-colors">Services</Link>
+          <Link to="/blog" className="text-white/80 hover:text-pink-400 transition-colors">Blog</Link>
           <Link to="/#contact" className="btn-primary bg-gradient-to-r from-pink-500 to-blue-500 border-none">Contact</Link>
         </div>
 
-        {/* Mobile Navigation Toggle */}
+        {/* Mobile Navigation */}
         <button 
           className="md:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -50,7 +51,8 @@ const Navbar = () => {
       <div className={`md:hidden absolute w-full bg-[#0F0817]/95 backdrop-blur-md border-b border-pink-500/20 shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-64 py-4 opacity-100' : 'max-h-0 py-0 opacity-0 overflow-hidden'}`}>
         <div className="container mx-auto px-6 flex flex-col gap-4">
           <Link to="/" className="text-white/80 hover:text-pink-400 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Home</Link>
-          <Link to="/#services" className="text-white/80 hover:text-pink-400 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Services</Link>
+          <Link to="/services" className="text-white/80 hover:text-pink-400 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Services</Link>
+          <Link to="/blog" className="text-white/80 hover:text-pink-400 transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Blog</Link>
           <Link to="/#contact" className="btn-primary bg-gradient-to-r from-pink-500 to-blue-500 border-none w-full text-center" onClick={() => setIsMenuOpen(false)}>Contact</Link>
         </div>
       </div>
