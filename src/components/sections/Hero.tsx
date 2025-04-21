@@ -9,10 +9,24 @@ const Hero = () => {
           <div className="md:w-1/2 animate-fade-in">
             <div className="mb-6">
               <span className="ai-tag mb-4">AI-Powered Development</span>
+              <div className="flex items-center gap-4 mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                  Ravinder Poonia
+                </h1>
+                <AvatarCircles 
+                  className="mt-2"
+                  numPeople={99}
+                  avatarUrls={[
+                    { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=1", profileUrl: "#" },
+                    { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=2", profileUrl: "#" },
+                    { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=3", profileUrl: "#" },
+                    { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=4", profileUrl: "#" },
+                  ]}
+                />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
                 Empowering Developers with <span className="text-gradient">AI-Driven Expertise</span>
               </h1>
-              <AvatarCircles
                 className="mb-6"
                 numPeople={99}
                 avatarUrls={[
