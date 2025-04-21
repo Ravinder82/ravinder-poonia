@@ -12,6 +12,16 @@ const Hero = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
                 Empowering Developers with <span className="text-gradient">AI-Driven Expertise</span>
               </h1>
+              <AvatarCircles
+                className="mb-6"
+                numPeople={99}
+                avatarUrls={[
+                  { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=1", profileUrl: "#" },
+                  { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=2", profileUrl: "#" },
+                  { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=3", profileUrl: "#" },
+                  { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=4", profileUrl: "#" },
+                ]}
+              />
               <p className="text-xl text-white/80 mb-8">
                 Elite mentorship in AI integration, software development, and digital transformation. Transform your coding journey with industry-leading guidance.
               </p>
