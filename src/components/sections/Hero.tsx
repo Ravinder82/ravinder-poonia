@@ -10,10 +10,10 @@ const Hero = () => {
             <div className="mb-6">
               <span className="ai-tag mb-4">AI-Powered Development</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-                Building Smarter <span className="text-gradient">Digital Futures</span> with AI-Driven Solutions
+                Empowering Developers with <span className="text-gradient">AI-Driven Expertise</span>
               </h1>
               <p className="text-xl text-white/80 mb-8">
-                Transforming businesses through intelligent web & mobile development tailored to your unique needs.
+                Elite mentorship in AI integration, software development, and digital transformation. Transform your coding journey with industry-leading guidance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#services" className="btn-primary">
