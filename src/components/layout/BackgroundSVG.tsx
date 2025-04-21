@@ -8,7 +8,7 @@ const BackgroundSVG = () => {
         <defs>
           <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
             <rect x="0" y="0" width="10" height="10" fill="#1E1022" opacity="0.1" />
-            <path d="M0 0 L10 10 M10 0 L0 10" stroke="#33163A" stroke-width="0.2" opacity="0.2" />
+            <path d="M0 0 L10 10 M10 0 L0 10" stroke="#33163A" strokeWidth="0.2" opacity="0.2" />
           </pattern>
           <filter id="glow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="objectBoundingBox">
             <feGaussianBlur stdDeviation="1" />
