@@ -1,5 +1,14 @@
-
 import { ArrowRight } from 'lucide-react';
+//Import necessary AI tool icons here.  e.g., import {AiOutlineAiFill} from 'react-icons/ai';
+
+const OrbitingCirclesDemo = () => {
+  //Implementation for OrbitingCirclesDemo component goes here.  This component should render 9 AI tool icons in an orbiting animation.
+  return (
+    <div>
+      {/* Render orbiting circles with AI tool icons here */}
+    </div>
+  );
+};
 
 const Hero = () => {
   return (
@@ -9,33 +18,17 @@ const Hero = () => {
           <div className="md:w-1/2 animate-fade-in">
             <div className="mb-6">
               <span className="ai-tag mb-4">AI-Powered Development</span>
-              <div className="flex items-center gap-4 mb-6">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+              <div className="flex flex-col items-start gap-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500">
                   Ravinder Poonia
                 </h1>
-                <AvatarCircles 
-                  className="mt-2"
-                  numPeople={99}
-                  avatarUrls={[
-                    { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=1", profileUrl: "#" },
-                    { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=2", profileUrl: "#" },
-                    { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=3", profileUrl: "#" },
-                    { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=4", profileUrl: "#" },
-                  ]}
-                />
+                <div className="relative w-full max-w-[300px] h-[120px] overflow-hidden">
+                  <OrbitingCirclesDemo />
+                </div>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
                 Empowering Developers with <span className="text-gradient">AI-Driven Expertise</span>
               </h1>
-                className="mb-6"
-                numPeople={99}
-                avatarUrls={[
-                  { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=1", profileUrl: "#" },
-                  { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=2", profileUrl: "#" },
-                  { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=3", profileUrl: "#" },
-                  { imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=4", profileUrl: "#" },
-                ]}
-              />
               <p className="text-xl text-white/80 mb-8">
                 Elite mentorship in AI integration, software development, and digital transformation. Transform your coding journey with industry-leading guidance.
               </p>
@@ -49,7 +42,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="md:w-1/2 relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="glass-card p-6 animate-float">
               <div className="rounded-lg bg-navy overflow-hidden">
@@ -65,7 +58,7 @@ const Hero = () => {
 {`// AI-powered component generation
 const AIComponent = ({ prompt, style }) => {
   const [components, setComponents] = useState([]);
-  
+
   useEffect(() => {
     // Generate components based on prompt
     generateAIComponents(prompt)
@@ -89,7 +82,7 @@ const AIComponent = ({ prompt, style }) => {
                 <span className="text-teal font-medium">AI-Powered Development:</span> Let our intelligent systems build components based on your requirements.
               </div>
             </div>
-            
+
             <div className="absolute -bottom-8 -right-8 bg-secondary p-4 rounded-xl border border-teal/30 shadow-xl w-40 animate-float" style={{ animationDelay: '0.2s' }}>
               <p className="text-teal text-xs mb-2 font-medium">Ready to start?</p>
               <a href="#contact" className="text-white flex items-center text-sm group">

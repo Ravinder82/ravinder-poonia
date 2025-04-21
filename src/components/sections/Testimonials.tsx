@@ -32,9 +32,9 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="py-24 overflow-hidden bg-[#0F0817]">
-      <div className="container mx-auto px-6 mb-10">
-        <span className="ai-tag mb-4">Testimonials</span>
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What Clients Say</h2>
+      <div className="container mx-auto px-6 mb-10 text-center">
+        <span className="ai-tag mb-4 inline-block">Testimonials</span>
+        <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent mb-6">What Clients Say</h2>
       </div>
       
       <Marquee className="py-12" pauseOnHover>
