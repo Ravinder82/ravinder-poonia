@@ -5,20 +5,20 @@
 
 @layer base {
   :root {
-    --background: 261 33% 6%; /* Darker purple-black */
-    --foreground: 171 100% 85%;
+    --background: 230 25% 5%;
+    --foreground: 210 100% 98%;
 
-    --card: 261 33% 8%; /* Slightly lighter than background */
-    --card-foreground: 0 0% 98%;
+    --card: 230 25% 7%;
+    --card-foreground: 210 100% 98%;
 
-    --popover: 261 33% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 230 25% 5%;
+    --popover-foreground: 210 100% 98%;
 
-    --primary: 320 100% 60%; /* Neon pink */
-    --primary-foreground: 261 33% 6%;
+    --primary: 250 100% 65%;
+    --primary-foreground: 230 25% 5%;
 
-    --secondary: 261 33% 10%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 230 25% 10%;
+    --secondary-foreground: 210 100% 98%;
 
     --muted: 261 33% 10%;
     --muted-foreground: 210 20% 80%;
