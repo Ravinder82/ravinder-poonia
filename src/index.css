@@ -183,6 +183,45 @@
   z-index: 2;
 }
 
+.animated-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(23, 23, 23, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.animated-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 80px;
+  height: 360px;
+  background: linear-gradient(var(--primary), var(--secondary));
+  transition: opacity 0.3s;
+  animation: card-rotation 8s infinite linear;
+  animation-play-state: paused;
+}
+
+.animated-card:hover::before {
+  opacity: 0.5;
+  animation-play-state: running;
+}
+
+.animated-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 23, 23, 0.7);
+  backdrop-filter: blur(50px);
+}
+
+@keyframes card-rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .glass-card .content::before {
   opacity: 0;
   transition: opacity 300ms;

@@ -71,14 +71,14 @@ const Portfolio = () => {
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
-              className={`glass-card p-8 group ${item.className}`}
+              className={`glass-card animated-card p-8 group ${item.className}`}
             >
-              <div className="content">
-              <div className="h-12 w-12 rounded-lg bg-secondary/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                {item.icon}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-              <p className="text-white/70">{item.description}</p>
+              <div className="content relative z-10">
+                <div className="h-12 w-12 rounded-lg bg-secondary/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                <p className="text-white/70">{item.description}</p>
               </div>
             </motion.div>
           ))}
