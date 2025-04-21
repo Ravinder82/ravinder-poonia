@@ -11,6 +11,8 @@ const Home = () => {
       <main className="bg-[#0F0817] relative">
         <AboutHero />
         <Services />
+        <Portfolio />
+        <Contact />
       </main>
       <Footer />
     </div>

@@ -1,48 +1,72 @@
 
-import { Code, Smartphone, Bot, Palette, ChevronRight } from 'lucide-react';
+import { Code, Bot, BookOpen, Terminal, LucideGraduationCap, BrainCircuit } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const services = [
   {
-    icon: <Code size={24} className="text-teal" />,
-    title: "Custom Web & Mobile Apps",
-    description: "Full-stack development with React, Next.js, Node.js and iOS/macOS app development with SwiftUI.",
-    features: ["Responsive web applications", "Native mobile experiences", "Cross-platform solutions"]
+    icon: <BrainCircuit size={24} className="text-pink-500" />,
+    title: "AI Integration Mastery",
+    description: "Learn how to leverage AI tools and APIs to enhance your development workflow and create intelligent applications.",
+    features: ["AI Agents & LLMs", "Prompt Engineering", "AI-assisted Development"]
   },
   {
-    icon: <Bot size={24} className="text-teal" />,
-    title: "AI Integration",
-    description: "Enhance your products with intelligent features powered by the latest AI technologies.",
-    features: ["Chatbots & virtual assistants", "Predictive analytics", "Natural language processing"]
+    icon: <BookOpen size={24} className="text-purple-500" />,
+    title: "Online AI Coaching",
+    description: "Personalized mentoring to help you master AI tools and modern development practices.",
+    features: ["1-on-1 Sessions", "Project-based Learning", "Real-world Applications"]
   },
   {
-    icon: <Palette size={24} className="text-teal" />,
-    title: "UI/UX Design Systems",
-    description: "Create cohesive and intuitive user experiences with AI-powered design systems.",
-    features: ["Interactive prototypes", "Component libraries", "User behavior analytics"]
+    icon: <Terminal size={24} className="text-blue-500" />,
+    title: "IDE & Tools Mastery",
+    description: "Master development environments and AI-powered tools to maximize your productivity.",
+    features: ["Replit Mastery", "MCP Server Setup", "AI Development Tools"]
   },
   {
-    icon: <Smartphone size={24} className="text-teal" />,
-    title: "AI Product Suite",
-    description: "Specialized AI solutions designed to solve specific business challenges.",
-    features: ["Prompt engineering packages", "Custom AI agents", "MCP server configuration"]
+    icon: <LucideGraduationCap size={24} className="text-teal" />,
+    title: "AI Career Guidance",
+    description: "Learn how to monetize your AI skills and build a successful career in AI development.",
+    features: ["Portfolio Building", "Freelancing with AI", "Business Integration"]
   }
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-navy">
+    <section id="services" className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="ai-tag mb-4">Our Services</span>
-          <h2 className="section-title">AI-Enhanced Development Solutions</h2>
-          <p className="section-subtitle mx-auto">
-            Leverage the power of artificial intelligence to create smarter, more efficient digital products
-          </p>
+          <motion.span 
+            initial={{ opacity: 0 }} 
+            whileInView={{ opacity: 1 }} 
+            className="ai-tag mb-4"
+          >
+            Expert AI Training
+          </motion.span>
+          <motion.h2 
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            className="section-title"
+          >
+            AI Development & Coaching
+          </motion.h2>
+          <motion.p 
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="section-subtitle mx-auto"
+          >
+            Transform your development skills with AI-powered techniques and personalized coaching
+          </motion.p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-secondary/30 rounded-xl p-8 card-hover border border-white/5">
+            <motion.div 
+              key={index}
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: index * 0.1 }}
+              className="glass-card p-8 hover:border-pink-500/30 transition-all duration-300"
+            >
               <div className="h-12 w-12 rounded-lg bg-secondary/50 flex items-center justify-center mb-6">
                 {service.icon}
               </div>
@@ -51,12 +75,12 @@ const Services = () => {
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start">
-                    <ChevronRight size={18} className="text-teal mr-2 mt-0.5 flex-shrink-0" />
+                    <div className="mr-2 mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500" />
                     <span className="text-white/80">{feature}</span>
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
