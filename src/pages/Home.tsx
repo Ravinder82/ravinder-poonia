@@ -3,6 +3,8 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import AboutHero from '../components/about/AboutHero';
 import Services from '../components/sections/Services';
+import Portfolio from '../components/sections/Portfolio';
+import Contact from '../components/sections/Contact';
 
 const Home = () => {
   return (
