@@ -5,6 +5,7 @@ import AboutHero from '../components/about/AboutHero';
 import Services from '../components/sections/Services';
 import Portfolio from '../components/sections/Portfolio';
 import Contact from '../components/sections/Contact';
+import Testimonials from '../components/sections/Testimonials';
 
 const Home = () => {
   return (
