@@ -6,6 +6,8 @@ import Services from '../components/sections/Services';
 import Portfolio from '../components/sections/Portfolio';
 import Contact from '../components/sections/Contact';
 import Testimonials from '../components/sections/Testimonials';
+import { OrbitingCircles } from '@/components/magicui/orbiting-circles';
+import { Icons } from '@/components/magicui/icons';
 
 const Home = () => {
   return (

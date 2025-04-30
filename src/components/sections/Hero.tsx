@@ -1,64 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { AvatarCircles } from '@/components/magicui/avatar-circles';
 import { OrbitingCircles } from '@/components/magicui/orbiting-circles';
-
-const Icons = {
-  openai: () => (
-    <svg viewBox="0 0 24 24" className="fill-white" width="100%" height="100%">
-      <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729z" />
-    </svg>
-  ),
-  chatgpt: () => (
-    <svg viewBox="0 0 24 24" className="fill-green-400" width="100%" height="100%">
-      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" />
-    </svg>
-  ),
-  tensorflow: () => (
-    <svg viewBox="0 0 24 24" className="fill-orange-400" width="100%" height="100%">
-      <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" />
-    </svg>
-  ),
-  pytorch: () => (
-    <svg viewBox="0 0 24 24" className="fill-red-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-    </svg>
-  ),
-  huggingface: () => (
-    <svg viewBox="0 0 24 24" className="fill-yellow-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-    </svg>
-  ),
-  stability: () => (
-    <svg viewBox="0 0 24 24" className="fill-blue-400" width="100%" height="100%">
-      <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" />
-    </svg>
-  ),
-  midjourney: () => (
-    <svg viewBox="0 0 24 24" className="fill-purple-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-    </svg>
-  ),
-  anthropic: () => (
-    <svg viewBox="0 0 24 24" className="fill-pink-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-    </svg>
-  ),
-  deepmind: () => (
-    <svg viewBox="0 0 24 24" className="fill-cyan-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-    </svg>
-  ),
-};
-//Import necessary AI tool icons here.  e.g., import {AiOutlineAiFill} from 'react-icons/ai';
-
-const OrbitingCirclesDemo = () => {
-  //Implementation for OrbitingCirclesDemo component goes here.  This component should render 9 AI tool icons in an orbiting animation.
-  return (
-    <div>
-      {/* Render orbiting circles with AI tool icons here */}
-    </div>
-  );
-};
+import { Icons } from '@/components/magicui/icons';
 
 const Hero = () => {
   return (

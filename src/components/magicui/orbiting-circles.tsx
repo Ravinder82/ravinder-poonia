@@ -1,3 +1,103 @@
+
+"use client";
+
+import * as React from "react";
+import { cn } from "@/lib/utils";
+import { Icons } from "./icons";
+
+interface OrbitingCirclesProps {
+  className?: string;
+  children?: React.ReactNode;
+  radius?: number;
+  reverse?: boolean;
+  duration?: number;
+  delay?: number;
+  path?: boolean;
+  iconSize?: number;
+  speed?: number;
+}
+
+export function OrbitingCircles({
+  className,
+  children,
+  radius = 160,
+  reverse = false,
+  duration = 20,
+  delay = 0,
+  path = true,
+  iconSize = 30,
+  speed = 1,
+}: OrbitingCirclesProps) {
+  const childCount = React.Children.count(children);
+  const childrenArray = React.Children.toArray(children);
+  
+  return (
+    <div
+      className={cn(
+        "relative flex h-full w-full items-center justify-center",
+        className
+      )}
+    >
+      {path && (
+        <div
+          className="absolute rounded-full border border-dashed border-gray-400/50 dark:border-gray-600/50"
+          style={{
+            width: radius * 2,
+            height: radius * 2,
+          }}
+        />
+      )}
+      {childrenArray.map((child, index) => {
+        const degree = (index / childCount) * 360;
+        
+        return (
+          <div
+            key={index}
+            className="absolute"
+            style={{
+              width: iconSize,
+              height: iconSize,
+              transform: `rotate(${degree}deg) translateX(${radius}px)`,
+              animation: `${reverse ? "orbit-reverse" : "orbit"} ${
+                duration / speed
+              }s linear ${delay}s infinite`,
+            }}
+          >
+            <div
+              className="flex h-full w-full items-center justify-center rounded-full bg-white dark:bg-black"
+              style={{
+                transform: `rotate(-${degree}deg)`,
+              }}
+            >
+              {child}
+            </div>
+          </div>
+        );
+      })}
+      
+      <style jsx>{`
+        @keyframes orbit {
+          0% {
+            transform: rotate(0deg) translateX(${radius}px) rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg) translateX(${radius}px) rotate(-360deg);
+          }
+        }
+        
+        @keyframes orbit-reverse {
+          0% {
+            transform: rotate(0deg) translateX(${radius}px) rotate(0deg);
+          }
+          100% {
+            transform: rotate(-360deg) translateX(${radius}px) rotate(360deg);
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
@@ -17,51 +117,3 @@ export function OrbitingCirclesDemo() {
     </div>
   );
 }
-
-const Icons = {
-  openai: () => (
-    <svg viewBox="0 0 24 24" className="fill-white" width="100%" height="100%">
-      <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944z" />
-    </svg>
-  ),
-  chatgpt: () => (
-    <svg viewBox="0 0 24 24" className="fill-green-400" width="100%" height="100%">
-      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13H11v4H7v2h4v4h2v-4h4v-2h-4V7z" />
-    </svg>
-  ),
-  tensorflow: () => (
-    <svg viewBox="0 0 24 24" className="fill-orange-400" width="100%" height="100%">
-      <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm-1 17.95l-7-3.5V8.45l7 3.5v8zm1-9.45L5 6.45l7-3.5 7 3.5-7 3.5zm8 5.95l-7 3.5v-8l7-3.5v8z" />
-    </svg>
-  ),
-  pytorch: () => (
-    <svg viewBox="0 0 24 24" className="fill-red-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3-11c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z" />
-    </svg>
-  ),
-  huggingface: () => (
-    <svg viewBox="0 0 24 24" className="fill-yellow-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-5.5c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2z" />
-    </svg>
-  ),
-  stability: () => (
-    <svg viewBox="0 0 24 24" className="fill-blue-400" width="100%" height="100%">
-      <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 18l-8-4V8l8 4v8z" />
-    </svg>
-  ),
-  midjourney: () => (
-    <svg viewBox="0 0 24 24" className="fill-purple-400" width="100%" height="100%">
-      <path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H4V5h16v14z" />
-    </svg>
-  ),
-  anthropic: () => (
-    <svg viewBox="0 0 24 24" className="fill-pink-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-    </svg>
-  ),
-  deepmind: () => (
-    <svg viewBox="0 0 24 24" className="fill-cyan-400" width="100%" height="100%">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z" />
-    </svg>
-  ),
-};
