@@ -3,7 +3,6 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Icons } from "./icons";
 
 interface OrbitingCirclesProps {
   className?: string;
@@ -75,7 +74,8 @@ export function OrbitingCircles({
         );
       })}
       
-      <style jsx>{`
+      <style>
+        {`
         @keyframes orbit {
           0% {
             transform: rotate(0deg) translateX(${radius}px) rotate(0deg);
@@ -93,7 +93,8 @@ export function OrbitingCircles({
             transform: rotate(-360deg) translateX(${radius}px) rotate(360deg);
           }
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 }
