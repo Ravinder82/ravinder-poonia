@@ -35,6 +35,10 @@ const Contact = () => {
     });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section id="contact" className="py-24 bg-[#0F0817]">
       <div className="container mx-auto px-6">
@@ -119,6 +123,15 @@ const Contact = () => {
             <p className="text-white/70">Prefer to email directly?</p>
             <a href="mailto:1294ravinder@gmail.com" className="text-teal hover:underline">1294ravinder@gmail.com</a>
           </div>
+        </div>
+        
+        <div className="text-center mt-12">
+          <button 
+            onClick={scrollToTop}
+            className="btn-outline"
+          >
+            Back to Top
+          </button>
         </div>
       </div>
     </section>

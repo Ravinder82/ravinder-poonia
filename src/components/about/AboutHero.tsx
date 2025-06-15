@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Avatar } from '@/components/ui/avatar';
+import { Link } from 'react-router-dom';
 
 const AboutHero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -42,12 +43,12 @@ const AboutHero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/ai-coaching" className="btn-primary">
+              <Link to="/ai-coaching" className="btn-primary">
                 Explore AI Coaching
-              </a>
-              <a href="/ai-portfolio" className="btn-outline">
+              </Link>
+              <Link to="/ai-portfolio" className="btn-outline">
                 View AI Portfolio
-              </a>
+              </Link>
             </div>
           </div>
           
