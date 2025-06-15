@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from 'react';
 import { Avatar } from '@/components/ui/avatar';
-import NewsletterForm from '../newsletter/NewsletterForm';
 
 const AboutHero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -25,7 +24,7 @@ const AboutHero = () => {
               Transforming complex challenges into innovative digital solutions through AI-driven development and automation.
             </p>
             
-            <div className="flex gap-4 text-sm text-white/60">
+            <div className="flex gap-4 text-sm text-white/60 mb-8">
               <div>
                 <p className="text-pink-400 font-medium mb-1">Experience</p>
                 <p>5+ Years</p>
@@ -42,7 +41,14 @@ const AboutHero = () => {
               </div>
             </div>
 
-            <NewsletterForm />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="/ai-coaching" className="btn-primary">
+                Explore AI Coaching
+              </a>
+              <a href="/ai-portfolio" className="btn-outline">
+                View AI Portfolio
+              </a>
+            </div>
           </div>
           
           <div className="md:w-1/2 relative z-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
